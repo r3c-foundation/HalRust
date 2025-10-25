@@ -1,0 +1,24 @@
+name: 🪶 Auto Init HalRust Docs
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - "scripts/init_docs.py"
+      - "mkdocs.yml"
+jobs:
+  build-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Initialize Docs Structure
+        run: python3 scripts/init_docs.py
+      - name: Build Docs Preview
+        run: |
+          pip install mkdocs-material
+          mkdocs build
+      - name: Deploy Docs
+        run: mkdocs gh-deploy --force

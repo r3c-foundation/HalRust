@@ -1,0 +1,89 @@
+site_name: HalRust Documentation Portal
+site_description: Hybrid Adaptive Layered Rust — LLVM and Freedom can coexist.
+site_author: R3C Foundation
+repo_url: https://github.com/r3c-foundation/halrust
+repo_name: r3c-foundation/halrust
+theme:
+  name: material
+  logo: assets/halrust_logo.png
+  favicon: assets/favicon.ico
+  palette:
+    scheme: slate
+    primary: indigo
+    accent: deep orange
+  features:
+    - navigation.tabs
+    - navigation.instant
+    - content.code.copy
+    - content.tabs.link
+
+nav:
+  - 🪶 Introduction:
+      - Overview: docs/00_INTRODUCTION/overview.md
+      - Design Goals: docs/00_INTRODUCTION/design_goals.md
+      - Philosophy: docs/00_INTRODUCTION/philosophy.md
+
+  - ⚙️ Architecture:
+      - Compiler Flow: docs/01_ARCHITECTURE/compiler_flow.md
+      - LLVM Path: docs/01_ARCHITECTURE/llvm_path.md
+      - ASM Path: docs/01_ARCHITECTURE/asm_path.md
+      - Dual Mode: docs/01_ARCHITECTURE/dual_mode.md
+
+  - 🧱 Build System:
+      - Setup: docs/02_BUILD_SYSTEM/setup.md
+      - Build (Hybrid): docs/02_BUILD_SYSTEM/build_hybrid.md
+      - Build (No LLVM): docs/02_BUILD_SYSTEM/build_no_llvm.md
+      - CI/CD Pipeline: docs/02_BUILD_SYSTEM/ci_cd_pipeline.md
+
+  - 🔩 Components:
+      - hal_core.rs: docs/03_COMPONENTS/hal_core.md
+      - hal_codegen.rs: docs/03_COMPONENTS/hal_codegen.md
+      - hal_direct_asm.rs: docs/03_COMPONENTS/hal_direct_asm.md
+      - LLVM Adapter: docs/03_COMPONENTS/llvm_adapter.md
+      - ASM Emitter: docs/03_COMPONENTS/asm_emitter.md
+
+  - 🧠 Guides:
+      - Hybrid Mode Guide: docs/04_GUIDES/hybrid_mode_guide.md
+      - Pure ASM Mode Guide: docs/04_GUIDES/pure_asm_guide.md
+      - Debug Mode Guide: docs/04_GUIDES/debug_mode_guide.md
+      - Transition from rustc: docs/04_GUIDES/transition_from_rustc.md
+      - Migration to R3C: docs/04_GUIDES/migration_to_r3c.md
+
+  - 🌍 Ecosystem:
+      - Relation to R3C: docs/05_ECOSYSTEM/relation_to_r3c.md
+      - Relation to LTSS: docs/05_ECOSYSTEM/relation_to_ltss.md
+      - cpppm Integration: docs/05_ECOSYSTEM/cpppm_integration.md
+      - Rust VM (No LLVM): docs/05_ECOSYSTEM/rust_vm_no_llvm.md
+
+  - 📜 Philosophy & Manifestos:
+      - Coexistence Manifesto: docs/06_PHILOSOPHY_AND_MANIFESTOS/coexistence_manifesto.md
+      - Independence Statement: docs/06_PHILOSOPHY_AND_MANIFESTOS/independence_statement.md
+      - Future of Rust: docs/06_PHILOSOPHY_AND_MANIFESTOS/future_of_rust.md
+      - Beyond LLVM Thesis: docs/06_PHILOSOPHY_AND_MANIFESTOS/beyond_llvm_thesis.md
+
+  - 🔧 API Reference:
+      - CLI Usage: docs/07_API_REFERENCE/halrust_cli.md
+      - Config Options: docs/07_API_REFERENCE/config_options.md
+      - LLVM Hooks: docs/07_API_REFERENCE/llvm_hooks.md
+      - ASM Emitter API: docs/07_API_REFERENCE/asm_emitter_api.md
+
+  - 🧪 Examples:
+      - Hybrid Example: docs/08_EXAMPLES/example_hybrid_project.md
+      - No-LLVM Example: docs/08_EXAMPLES/example_no_llvm_project.md
+      - Performance Comparison: docs/08_EXAMPLES/performance_comparison.md
+      - Debugging Samples: docs/08_EXAMPLES/debugging_samples.md
+
+  - 📘 Appendix:
+      - Glossary: docs/09_APPENDIX/glossary.md
+      - Versioning Policy: docs/09_APPENDIX/versioning_policy.md
+      - License Notice: docs/09_APPENDIX/license_notice.md
+      - Contributors: docs/09_APPENDIX/contributors.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/r3c-foundation
+    - icon: fontawesome/brands/rust
+      link: https://rust-lang.org
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/company/r3c-foundation
